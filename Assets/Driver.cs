@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Driver : MonoBehaviour
 {
     [SerializeField] float steerSpeed = 1f;
     [SerializeField] float moveSpeed = 20f;
     [SerializeField] float slowSpeed = 15f;
     [SerializeField] float boostSpeed = 30f;
+
+    enum DriverType { Player, AI };
+
+    [SerializeField] private DriverType driverType = DriverType.Player;
 
     void Update()
     {
